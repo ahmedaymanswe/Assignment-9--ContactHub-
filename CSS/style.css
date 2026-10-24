@@ -145,6 +145,13 @@ body {
 textarea{
   resize: none;
 }
+#invokerDialog{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header .navbar{
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
 header .logo {
   width: 2.75rem;
   height: 2.75rem;
@@ -402,8 +409,9 @@ main
   background: var(--color-blue-100);
   color: var(--color-blue-600);
 }
-main #Hero-Section .contacts .contact .card-footer .rght-div .delete-logo {
+main #Hero-Section .contacts .contact .card-footer .rght-div i {
   background: transparent;
+  color: var(--color-gray-600);
 }
 main
   #Hero-Section

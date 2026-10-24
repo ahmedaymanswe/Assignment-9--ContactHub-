@@ -53,6 +53,13 @@ function addContact() {
   document.getElementById("closeForm").click();
 
   display();
+  Swal.fire({
+    title: "Added!",
+    text: "Contact has been added successfully!",
+    icon: "success",
+    timer: 1500,
+    showConfirmButton: !1,
+  });
 }
 
 function display(list = contacts) {
@@ -408,25 +415,48 @@ function isValidInput(input, id, reg) {
 
 function isValid(name, phone, email) {
   if (name == "") {
-    alert("Please enter a name for the contact!");
+    Swal.fire({
+      title: "Missing Name",
+      text: "Please enter a name for the contact!",
+      icon: "error",
+      topLayer: true,
+    });
     return false;
   }
   if (!validationInput.nameReg.test(name)) {
-    alert("Name should contain only letters and spaces (2-50 characters).");
+    Swal.fire({
+      title: "Invalid Name",
+      text: "Name should contain only letters and spaces (2-50 characters).",
+      icon: "error",
+      topLayer: true,
+    });
     return false;
   }
   if (phone == "") {
-    alert("Please enter a phone number!");
+    Swal.fire({
+      title: "Missing Phone",
+      text: "Please enter a phone number!",
+      icon: "error",
+      topLayer: true,
+    });
     return false;
   }
   if (!validationInput.phoneReg.test(phone)) {
-    alert(
-      "Please enter a valid Egyptian phone number (e.g., 01012345678 or +201012345678).",
-    );
+    Swal.fire({
+      title: "Invalid Phone",
+      text: "Please enter a valid Egyptian phone number (e.g., 01012345678 or +201012345678).",
+      icon: "error",
+      topLayer: true,
+    });
     return false;
   }
   if (!validationInput.emailReg.test(email) && email != "") {
-    alert("Please enter a valid email address.");
+    Swal.fire({
+      title: "Invalid Email",
+      text: "Please enter a valid email address.",
+      icon: "error",
+      topLayer: true,
+    });
     return false;
   }
   return true;
@@ -436,9 +466,14 @@ function isDuplicatePhone(phone, Index) {
   if (Index === undefined) Index = -1;
   for (var i = 0; i < contacts.length; i++) {
     if (i != Index && contacts[i].phone == phone) {
-      alert(
-        "A contact with this phone number already exists: " + contacts[i].name,
-      );
+      Swal.fire({
+        title: "Duplicate Phone Number",
+        text:
+          "A contact with this phone number already exists: " +
+          contacts[i].name,
+        icon: "error",
+        topLayer: true,
+      });
       return true;
     }
   }
@@ -519,6 +554,13 @@ function updateContact() {
   document.querySelector(".dialog-title").innerText = "Add New Contact";
   document.getElementById("closeForm").click();
   display();
+  Swal.fire({
+    title: "Updated!",
+    text: "Contact has been updated successfully!",
+    icon: "success",
+    timer: 1500,
+    showConfirmButton: !1,
+  });
 }
 function resetForm() {
   fullName.value = "";
