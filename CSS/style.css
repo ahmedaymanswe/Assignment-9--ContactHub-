@@ -148,6 +148,9 @@ textarea{
 #invokerDialog{
   background-color: rgba(255, 255, 255);
 }
+#invokerDialog label,#invokerDialog h5{
+  color: #000;
+}
 header .navbar{
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
