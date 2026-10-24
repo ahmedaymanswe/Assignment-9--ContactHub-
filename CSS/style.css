@@ -146,10 +146,10 @@ textarea{
   resize: none;
 }
 #invokerDialog{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 header .navbar{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(10px);
 }
 header .logo {
@@ -336,6 +336,10 @@ main #Hero-Section .contacts .contact .card-footer .lft-div .email-logo:hover {
 main #Hero-Section .contacts .contact .card-footer .rght-div .favorite-logo {
   background: var(--color-amber-50);
 }
+main #Hero-Section .contacts .contact .card-footer .rght-div button{
+  background-color: transparent;
+  color: var(--color-gray-600);
+}
 main
   #Hero-Section
   .contacts
@@ -409,10 +413,7 @@ main
   background: var(--color-blue-100);
   color: var(--color-blue-600);
 }
-main #Hero-Section .contacts .contact .card-footer .rght-div i {
-  background: transparent;
-  color: var(--color-gray-600);
-}
+
 main
   #Hero-Section
   .contacts
