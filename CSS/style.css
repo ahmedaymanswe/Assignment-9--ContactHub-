@@ -158,6 +158,9 @@ header .logo {
   background-color: var(--accent-color);
   border-radius: calc(var(--spacing) * 3);
 }
+header .brand-info h1 {
+  color: #000;
+}
 header .brand-info span {
   color: var(--accent-color);
 }
